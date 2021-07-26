@@ -7,9 +7,7 @@ body {
 img {
   width: 3%;
 }
-h4 {
-  /* font-size: 20px; */
-}
+
 /* firstPage */
 .firstP {
   /* background-color: blue; */
@@ -59,16 +57,20 @@ header {
 }
 .firstP article {
   width: 50%;
-  padding: 7em 10em;
+  padding: 7em 1em;
 }
 .firstP article h1 {
   font-size: 4.5em;
   margin-bottom: 0;
+  padding-left: 10%;
+  text-align: start;
 }
 
 .firstP article p {
   font-size: 23px;
   margin-bottom: 15%;
+  padding-left: 10%;
+  text-align: start;
 }
 .firstP article p > img {
   width: 4%;
@@ -76,8 +78,8 @@ header {
 .firstP a {
   color: rgb(200, 80, 139);
   text-decoration: none;
-  left: 7em;
-  top: 45em;
+  position: absolute;
+  left: 6em;
 }
 .seeMore {
   background: url(../img/images.jpg) center/cover no-repeat;
