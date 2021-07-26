@@ -107,34 +107,130 @@ header {
   padding: 0 10%;
   width: 100%;
   font-size: 55px;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 .after article {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-between;
-  padding: 10%;
+  padding: 5% 0;
+  height: 30vh;
+  margin-bottom: 2em;
 }
 .after article .Start,
 .Your,
 .Design,
 .Share {
   width: 50%;
-  text-align: center;
+  padding-left: 1%;
+  /* margin: 5%; */
 }
 .after article h4 {
-  font-size: 25px;
-  margin-bottom: 0;
+  font-size: 20px;
+  /* margin-bottom: 2%; */
 }
 .after article h6 {
-  background-color: yellow;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 2em;
-  /* text-align: start; */
   margin: 0;
+  color: gray;
+  padding-left: 6.5%;
+}
+.after article img {
+  width: 5%;
+  padding-right: 2%;
+  /* text-align: start; */
+}
+.start {
+  order: 0;
+}
+.Your {
+  order: 2;
+}
+.Design {
+  order: 1;
+}
+.Share {
+  order: 3;
+}
+article {
+  width: 100%;
+  text-align: center;
+  padding: 10%;
+}
+article h1 {
+  font-size: 4em;
+}
+article p {
+  font-size: 1.5em;
+  margin-bottom: 7em;
+  color: gray;
+}
+/* ziel */
+.go {
+  padding: 0 10%;
+}
+.go .Find,
+.Think,
+.proposal,
+.work {
+  flex-direction: column;
+  width: 45%;
+  height: 40%;
+  margin: 0;
+  padding-left: 50%;
 }
 
-.after article img {
-  width: 8%;
-  padding-right: 5%;
+.go .Find h2,
+.Think h2,
+.proposal h2,
+.work h2 {
+  font-size: 4em;
+  color: lightgray;
+}
+.go .Find h5,
+.Think h5,
+.proposal h5,
+.work h5 {
+  font-size: 2em;
+  margin: 1% 0;
+}
+.go .Find p,
+.Think p,
+.proposal p,
+.work p {
+  font-size: 1.3em;
+  line-height: 2em;
+  color: gray;
+  width: 30em;
+}
+.go .Find img,
+.Think img,
+.proposal img,
+.work img {
+  width: 5%;
+}
+
+.go .Find {
+  background: url(../img/step01.png) left/contain no-repeat;
+  width: 50%;
+  height: 40vh;
+  margin: 0;
+}
+.go .Think {
+  background: url(../img/step02.png) left/contain no-repeat;
+  width: 50%;
+  height: 40vh;
+}
+.go .proposal {
+  background: url(../img/step03.png) left/contain no-repeat;
+  width: 50%;
+  height: 40vh;
+  margin: 0;
+}
+.go .work {
+  background: url(../img/step04.png) left/contain no-repeat;
+  width: 50%;
+  height: 40vh;
+  margin: 0;
 }
