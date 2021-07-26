@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
-body {
+/* CSS hard reset */
+
+* {
+  padding: 0;
   margin: 0;
   font-family: Roboto;
 }
-/* general Effect */
-img {
-  width: 3%;
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* firstPage */
@@ -28,7 +31,17 @@ img {
   position: absolute;
   right: 1.5em;
   top: 2em;
+  animation: up-down 1.4s infinite ease-in-out alternate;
 }
+@keyframes up-down {
+  from {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(-70px);
+  }
+}
+/* logo */
 header {
   width: 20%;
   margin: 0;
@@ -40,8 +53,8 @@ header {
   top: 3.5em;
 }
 .firstP header img {
-  width: 3em;
-  padding: 3% 0 0 3%;
+  width: 2.5em;
+  padding: 4.5% 0 0 3%;
 }
 .firstP header h4 {
   font-size: 25px;
@@ -54,11 +67,11 @@ header {
 }
 .firstP article {
   width: 50%;
-  padding: 7em 1em;
+  padding: 10em 1em;
 }
 .firstP article h1 {
   font-size: 4.5em;
-  margin-bottom: 0;
+  margin-bottom: 2%;
   padding-left: 10%;
   text-align: start;
 }
@@ -71,6 +84,7 @@ header {
 }
 .firstP article p > img {
   width: 4%;
+  font-weight: bold;
 }
 .firstP a {
   color: rgb(200, 80, 139);
@@ -78,12 +92,14 @@ header {
   position: absolute;
   left: 6em;
 }
+/* bilder */
 .seeMore {
   background: url(../img/images.jpg) center/cover no-repeat;
   width: 100%;
-  min-height: 50vh;
+  height: 40vh;
   margin-bottom: 20%;
 }
+/* tipps1 */
 .Every {
   display: flex;
   padding: 0 7%;
@@ -92,16 +108,18 @@ header {
 }
 .Every h2 {
   font-size: 55px;
-  margin: 0;
 }
 .Every h2 > img {
   width: 1em;
 }
 .Every p {
-  font-size: 20px;
+  font-size: 18px;
   width: 60%;
   line-height: 2em;
+  color: gray;
+  padding-top: 2em;
 }
+/* tipps2 */
 .after h2 {
   padding: 0 10%;
   width: 100%;
@@ -110,44 +128,43 @@ header {
 }
 .after article {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
-  padding: 5% 0;
-  height: 30vh;
-  margin-bottom: 2em;
+  padding-left: 10em;
 }
 .after article .Start,
-.Your,
-.Design,
-.Share {
+.after article .Your,
+.after article .Design,
+.after article .Share {
   width: 50%;
-  padding-left: 1%;
-  /* margin: 5%; */
 }
 .after article h4 {
   font-size: 20px;
-  /* margin-bottom: 2%; */
+  text-align: start;
+  padding-left: 10%;
+  margin-bottom: 1em;
 }
 .after article h6 {
   font-size: 17px;
-  line-height: 2em;
-  margin: 0;
   color: gray;
-  padding-left: 6.5%;
+  text-align: start;
+  padding-left: 10%;
+  line-height: 2em;
 }
 .after article img {
   width: 5%;
-  padding-right: 2%;
-  /* text-align: start; */
+  margin: 0;
+
+  display: flex;
 }
 .start {
   order: 0;
 }
 .Your {
-  order: 2;
+  order: 1;
 }
 .Design {
-  order: 1;
+  order: 2;
 }
 .Share {
   order: 3;
@@ -155,81 +172,165 @@ header {
 article {
   width: 100%;
   text-align: center;
-  padding: 10%;
+  padding: 10% 5%;
 }
 article h1 {
-  font-size: 4em;
+  font-size: 3.5em;
+  margin-bottom: 3%;
 }
 article p {
   font-size: 1.5em;
   margin-bottom: 7em;
   color: gray;
 }
-/* ziel */
+/* process */
 .go {
   padding: 0 10%;
 }
-.go .Find,
-.Think,
-.proposal,
-.work {
-  flex-direction: column;
-  width: 45%;
-  height: 40%;
-  margin: 0;
-  padding-left: 50%;
+.go .Find {
+  order: 0;
+  padding-left: 60%;
 }
-
+.go .Think {
+  order: 1;
+}
+.go .proposal {
+  order: 2;
+  padding-left: 60%;
+}
+.go .work {
+  order: 3;
+}
+.go .Find,
+.go .Think,
+.go .proposal,
+.go .work {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  margin-bottom: 10%;
+}
 .go .Find h2,
 .Think h2,
 .proposal h2,
 .work h2 {
   font-size: 4em;
   color: lightgray;
+  margin-bottom: 5%;
 }
 .go .Find h5,
 .Think h5,
 .proposal h5,
 .work h5 {
-  font-size: 2em;
-  margin: 1% 0;
+  font-size: 1.5em;
+  margin-bottom: 3%;
 }
 .go .Find p,
 .Think p,
 .proposal p,
 .work p {
-  font-size: 1.3em;
+  font-size: 1sem;
   line-height: 2em;
   color: gray;
   width: 30em;
 }
 .go .Find img,
-.Think img,
-.proposal img,
-.work img {
+.go .Think img,
+.go .proposal img,
+.go .work img {
   width: 5%;
+  margin-bottom: 3%;
 }
 
 .go .Find {
   background: url(../img/step01.png) left/contain no-repeat;
-  width: 50%;
+  width: 100%;
   height: 40vh;
-  margin: 0;
 }
 .go .Think {
-  background: url(../img/step02.png) left/contain no-repeat;
-  width: 50%;
+  background: url(../img/step02.png) right/contain no-repeat;
+  width: 100%;
   height: 40vh;
 }
 .go .proposal {
   background: url(../img/step03.png) left/contain no-repeat;
-  width: 50%;
+  width: 100%;
   height: 40vh;
-  margin: 0;
 }
 .go .work {
-  background: url(../img/step04.png) left/contain no-repeat;
-  width: 50%;
+  background: url(../img/step04.png) right/contain no-repeat;
+  width: 100%;
   height: 40vh;
-  margin: 0;
+}
+.contact {
+  /* background-color: lightgray; */
+  text-align: center;
+}
+.contact h1 {
+  font-size: 50px;
+  margin-bottom: 3%;
+}
+.contact h5 {
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+#email {
+  border: 1px solid gray;
+  width: 50%;
+  height: 5vh;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3%;
+}
+.contact form input[type="button"] {
+  border: 1px solid rgb(193, 25, 96);
+  background-color: rgb(193, 25, 96);
+  width: 25%;
+  height: 4vh;
+  font-size: 1em;
+  color: white;
+  margin-bottom: 10%;
+}
+.contact form input[type="button"]:hover {
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+
+/* footer */
+footer h6 {
+  font-size: 1em;
+  margin-bottom: 3%;
+}
+
+footer h6::after {
+  content: "❤️";
+  margin-left: 2%;
+}
+
+/* Laptop */
+/* @media screen and (max-width: 992px) {
+  body {
+    background-color: red;
+  }
+} */
+/* Smartphone */
+
+/* @media screen and (max-width: 600px) {
+  body {
+    background-color: lime;
+  }
+} */
+/* in Kombination */
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  body {
+    background: blue;
+  }
 }
