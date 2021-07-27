@@ -92,13 +92,22 @@ header {
   position: absolute;
   left: 6em;
 }
+.firstP a {
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+.firstP a:hover {
+  transform: scale(1.2);
+  font-weight: bold;
+}
 /* bilder */
-.seeMore {
+#seeMore {
   background: url(../img/images.jpg) center/cover no-repeat;
   width: 100%;
   height: 40vh;
   margin-bottom: 20%;
 }
+
 /* tipps1 */
 .Every {
   display: flex;
@@ -295,12 +304,12 @@ article p {
 }
 .contact form input[type="button"]:hover {
   background: linear-gradient(
-      217deg,
+      236deg,
       rgba(255, 0, 0, 0.8),
       rgba(255, 0, 0, 0) 70.71%
     ),
-    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    linear-gradient(120deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(217deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
 }
 
 /* footer */
@@ -331,6 +340,6 @@ footer h6::after {
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   body {
-    background: blue;
+    /* background: blue; */
   }
 }
